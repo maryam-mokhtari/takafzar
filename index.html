@@ -4,24 +4,71 @@
     <title>apino - اپینو</title>
     <link href="apino.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      function scroll() {
+        var scrollTop =
+          document.body.scrollTop || document.documentElement.scrollTop
+        if (
+          scrollTop >
+          document.getElementById("main").offsetTop -
+            document.getElementById("top-line").offsetTop
+        ) {
+          document.getElementById("apino").style.display = "block"
+        } else if (
+          scrollTop > document.getElementById("apino-title").offsetTop
+        ) {
+        } else {
+          document.getElementById("apino").style.display = "none"
+        }
+      }
+    </script>
   </head>
-  <body>
-    <header class="top-line">
+  <body onscroll="scroll()">
+    <header id="top-line" class="top-line">
       <h1 class="logo">apino</h1>
     </header>
-    <main class="main">
-      <h3 class="title">سفری خوش با...</h3>
-      <h1 class="header">اپینو</h1>
+    <main id="main" class="main">
       <article class="text">
-        اپینو یکی از بهترین اپلیکیشن‌های حال حاضر در زمینه حمل و نقل است. این
-        نرم‌افزار توسط جمعی از مهندسان نرم‌افزار نخبه و با تجربه توسعه داده شده
-        است و چشم‌انداز نوینی در راستای فردای روشن ایران عزیزمان است. هدف اصلی
-        سرویس حمل و نقل اپینو که برای اولین بار در کشور به این شکل راه‌اندازی
-        شده است تسهیل جابه‌جایی همشریان و هموطنان در شهرهای بزرگ به ویژه تهران
-        بزرگ است.
+        <header class="article-header">
+          <h3 class="title">سفری خوش با...</h3>
+          <h2 class="apino" id="apino">apino</h2>
+        </header>
+        <div class="article-top">
+          <header id="apino-title" class="apino-title">apino</header>
+          یکی از بهترین اپلیکیشن‌های حال حاضر در زمینه حمل و نقل است. این
+          نرم‌افزار توسط جمعی از مهندسان نرم‌افزار نخبه و با تجربه توسعه داده
+          شده است و چشم‌انداز نوینی در راستای فردای روشن ایران عزیزمان است. هدف
+          اصلی سرویس حمل و نقل اپینو که برای اولین بار در کشور به این شکل
+          راه‌اندازی شده است تسهیل جابه‌جایی همشریان و هموطنان در شهرهای بزرگ به
+          ویژه تهران بزرگ است.
+        </div>
+        <div class="article-button">
+          <button class="letsgo">بزن بریم!</button>
+        </div>
+        <div class="article-bottom">
+          یکی از دستاوردهای مهم قرن بیستم، تکنولوژی و به تبع آن حمل و نقل شهری
+          است. از سال‌ها و حتی دهه‌ها پیش و حتی سده‌های گذشته و پیش از دوران
+          بلوغ تکنولوژی یکی از دغدغه‌های اصلی شهرنشینی جابه‌جا شدن گروهی در
+          مسیرهای طولانی بوده است.
+          <br />
+          مینی‌بوس و ون از جمله بهترین وسیله‌های نقلیه جهت کاهش ترافیک و
+          جابه‌جایی مسافران هستند که نه به اندازه اتوبوس بزرگ هستند که در
+          ایستگاه‌های متعدد برای سوار کردن مسافران معطل کنند و نه مثل
+          اتوموبیل‌های تک سرنشین باری بر معضل ترافیک شهری هستند. اپینو بدین طریق
+          توانسته است نقش مهمی در پر کردن خلا تردد مسافران در شهر ایفا کند.
+        </div>
       </article>
-      <div class="show-demo">
-        <button class="letsgo">بزن بریم!</button>
+      <div class="minibus-box-wrapper">
+        <div class="minibus-box">
+          <div class="moto">A new pinned application</div>
+          <div class="box-1"></div>
+          <div class="box-2"></div>
+          <div class="box-3"></div>
+          <div class="minibus-box-1"></div>
+          <div class="minibus-box-2"></div>
+          <div class="minibus-box-3"></div>
+          <img class="minibus" src="images/minibus.png" />
+        </div>
       </div>
     </main>
     <footer class="bottom-line">
