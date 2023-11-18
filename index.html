@@ -21,6 +21,10 @@
           document.getElementById("apino").style.display = "none"
         }
       }
+
+      function support() {
+        document.getElementById("support").classList.add("support-open")
+      }
     </script>
   </head>
   <body onscroll="scroll()">
@@ -42,8 +46,8 @@
           راه‌اندازی شده است تسهیل جابه‌جایی همشریان و هموطنان در شهرهای بزرگ به
           ویژه تهران بزرگ است.
         </div>
-        <div class="article-button">
-          <button class="letsgo">بزن بریم!</button>
+        <div class="button-wrapper">
+          <button class="button letsgo">بزن بریم!</button>
         </div>
         <div class="article-bottom">
           یکی از دستاوردهای مهم قرن بیستم، تکنولوژی و به تبع آن حمل و نقل شهری
@@ -69,6 +73,12 @@
           <div class="minibus-box-3"></div>
           <img class="minibus" src="images/minibus.png" />
         </div>
+      </div>
+      <div class="button-wrapper">
+        <button id="support" onclick="support()" class="button support">
+          <div class="support-text">پشتیبانی ۷-۲۴</div>
+          <a class="tel" href="tel:09224012079">09224012079</a>
+        </button>
       </div>
     </main>
     <footer class="bottom-line">
