@@ -103,20 +103,22 @@ h5 {
   height: 200px;
   background-color: var(--main);
   position: fixed;
-}
-
-.bottom-line {
-  bottom: 40px;
-  left: 0px;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding: 16px 40px;
 }
 
 .top-line {
   top: 40px;
   right: 0;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.bottom-line {
+  bottom: 40px;
+  left: 0px;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 16px 40px;
 }
 
 .main {
@@ -140,6 +142,11 @@ h5 {
   padding: 4px;
 }
 
+.apino-logo {
+  width: 40px;
+  margin: 10px;
+}
+
 .article-header {
   display: flex;
   justify-content: space-between;
@@ -153,13 +160,42 @@ h5 {
 }
 
 .soon {
-  background: -webkit-linear-gradient(0, var(--error), var(--success));
+  background: -webkit-linear-gradient(0, var(--main), var(--lighter));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 1.25rem;
   font-weight: bold;
-  transform: scaleX(1.5);
+  transform: scaleX(1.25);
+  white-space: pre;
+}
+
+.loading {
+  width: 65px;
+}
+
+.loading::after {
+  display: inline-block;
+  animation: dotty steps(1, end) 1s infinite;
+  content: "";
+}
+
+@keyframes dotty {
+  0% {
+    content: "";
+  }
+  25% {
+    content: ".";
+  }
+  50% {
+    content: "..";
+  }
+  75% {
+    content: "...";
+  }
+  100% {
+    content: "";
+  }
 }
 
 .title {
