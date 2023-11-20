@@ -24,6 +24,7 @@
 
       function support() {
         document.getElementById("support").classList.add("support-open")
+         document.getElementById("email").classList.add("email-open")
       }
     </script>
   </head>
@@ -37,7 +38,7 @@
           <h3 class="title">سفری خوش با...</h3>
           <h2 class="apino" id="apino">apino</h2>
         </header>
-        <div class="article-top">
+        <div>
           <header id="apino-title" class="apino-title">apino</header>
           یکی از بهترین اپلیکیشن‌های حال حاضر در زمینه حمل و نقل است. این
           نرم‌افزار توسط جمعی از مهندسان نرم‌افزار نخبه و با تجربه توسعه داده
@@ -48,8 +49,9 @@
         </div>
         <div class="button-wrapper">
           <button class="button letsgo">بزن بریم!</button>
+          <div class="soon">به زودی...</div>
         </div>
-        <div class="article-bottom">
+        <div>
           یکی از دستاوردهای مهم قرن بیستم، تکنولوژی و به تبع آن حمل و نقل شهری
           است. از سال‌ها و حتی دهه‌ها پیش و حتی سده‌های گذشته و پیش از دوران
           بلوغ تکنولوژی یکی از دغدغه‌های اصلی شهرنشینی جابه‌جا شدن گروهی در
@@ -60,7 +62,6 @@
           ایستگاه‌های متعدد برای سوار کردن مسافران معطل کنند و نه مثل
           اتوموبیل‌های تک سرنشین باری بر معضل ترافیک شهری هستند. اپینو بدین طریق
           توانسته است نقش مهمی در پر کردن خلا تردد مسافران در شهر ایفا کند.
-        </div>
       </article>
       <div class="minibus-box-wrapper">
         <div class="minibus-box">
@@ -75,10 +76,13 @@
         </div>
       </div>
       <div class="button-wrapper">
-        <button id="support" onclick="support()" class="button support">
+        <button id="support" class="button support" onclick="support()">
           <div class="support-text">پشتیبانی ۷-۲۴</div>
           <a class="tel" href="tel:09224012079">09224012079</a>
         </button>
+        <a id="email" class="email" href="mailto:support@apino.ir"
+          >support@apino.ir</a
+        >
       </div>
     </main>
     <footer class="bottom-line">
@@ -149,5 +153,24 @@
         </svg>
       </div>
     </footer>
+    <script type="text/javascript">
+      !(function () {
+        var i = "9Yiuyr",
+          a = window,
+          d = document
+        function g() {
+          var g = d.createElement("script"),
+            s = "scripts/goftino.js",
+            l = localStorage.getItem("goftino_" + i)
+          ;(g.async = !0), (g.src = l ? s + "?o=" + l : s)
+          d.getElementsByTagName("head")[0].appendChild(g)
+        }
+        "complete" === d.readyState
+          ? g()
+          : a.attachEvent
+          ? a.attachEvent("onload", g)
+          : a.addEventListener("load", g, !1)
+      })()
+    </script>
   </body>
 </html>
