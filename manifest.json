@@ -8,44 +8,80 @@
   "description": "A new pinned application ;)",
   "icons": [
     {
-      "src": "favicon/favicon-16x16.png",
+      "src": "favicon/apino-16x16.png",
       "sizes": "16x16",
       "type": "image/png"
     },
     {
-      "src": "favicon/favicon-32x32.png",
+      "src": "favicon/apino-32x32.png",
       "sizes": "32x32",
       "type": "image/png"
     },
     {
-      "src": "favicon/mstile-70x70.png",
+      "src": "favicon/apino-48x48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon/apino-70x70.png",
       "sizes": "70x70",
       "type": "image/png"
     },
     {
-      "src": "favicon/mstile-144x144.png",
+      "src": "favicon/apino-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon/apino-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon/apino-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon/apino-144x144.png",
       "sizes": "144x144",
       "type": "image/png"
     },
     {
-      "src": "favicon/mstile-150x150.png",
+      "src": "favicon/apino-150x150.png",
       "sizes": "150x150",
       "type": "image/png"
     },
     {
-      "src": "favicon/android-chrome-192x192.png",
+      "src": "favicon/apino-180x180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon/apino-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "favicon/mstile-310x310.png",
+      "src": "favicon/apino-310x310.png",
       "sizes": "310x310",
       "type": "image/png"
     },
     {
-      "src": "favicon/android-chrome-512x512.png",
+      "src": "favicon/apino-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon/apino-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
+    },
+    {
+      "src": "favicon/apino-1024x1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }

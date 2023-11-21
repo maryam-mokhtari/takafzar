@@ -24,6 +24,7 @@ body {
   font-family: Yekan;
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
   src: url("./fonts/Yekan.woff") format("woff");
 }
 
@@ -31,6 +32,7 @@ body {
   font-family: Yekan Persian Number;
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
   src: url("./fonts/Yekan-persian-number.woff") format("woff");
 }
 
@@ -38,18 +40,21 @@ body {
   font-family: Esfahan;
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
   src: url("./fonts/Esfahan.woff") format("woff");
 }
 
 @font-face {
   font-family: Poppins;
   font-style: normal;
+  font-display: swap;
   src: url("./fonts/Poppins.woff") format("woff");
 }
 
 @font-face {
   font-family: Nexa;
   font-style: normal;
+  font-display: swap;
   src: url("./fonts/Nexa.woff") format("woff");
 }
 
@@ -143,7 +148,6 @@ h5 {
 }
 
 .apino-logo {
-  width: 40px;
   margin: 10px;
 }
 
