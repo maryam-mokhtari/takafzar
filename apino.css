@@ -12,20 +12,12 @@
   --success: #008000;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: Yekan;
-  background-color: var(--light);
-}
-
 @font-face {
   font-family: Yekan;
   font-style: normal;
   font-weight: normal;
   font-display: swap;
-  src: url("./fonts/Yekan.woff") format("woff");
+  src: url("fonts/yekan.woff2") format("woff2");
 }
 
 @font-face {
@@ -33,29 +25,30 @@ body {
   font-style: normal;
   font-weight: normal;
   font-display: swap;
-  src: url("./fonts/Yekan-persian-number.woff") format("woff");
-}
-
-@font-face {
-  font-family: Esfahan;
-  font-style: normal;
-  font-weight: normal;
-  font-display: swap;
-  src: url("./fonts/Esfahan.woff") format("woff");
+  src: url("fonts/yekan-persian-number.woff") format("woff");
 }
 
 @font-face {
   font-family: Poppins;
   font-style: normal;
   font-display: swap;
-  src: url("./fonts/Poppins.woff") format("woff");
+  src: url("fonts/poppins.woff2") format("woff2");
 }
 
 @font-face {
   font-family: Nexa;
   font-style: normal;
   font-display: swap;
-  src: url("./fonts/Nexa.woff") format("woff");
+  src: url("fonts/nexa.woff2") format("woff2");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Yekan;
+  background-color: var(--light);
+  line-height: 2;
 }
 
 * {
@@ -144,10 +137,11 @@ h5 {
   color: var(--background);
   text-align: center;
   font-family: Poppins;
-  padding: 4px;
 }
 
 .apino-logo {
+  width: 40px;
+  height: auto;
   margin: 10px;
 }
 
@@ -168,37 +162,23 @@ h5 {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 1.25rem;
+  font-size: 2rem;
   font-weight: bold;
   transform: scaleX(1.25);
   white-space: pre;
+  animation: blink 2s infinite;
+  will-change: opacity;
 }
 
-.loading {
-  width: 65px;
-}
-
-.loading::after {
-  display: inline-block;
-  animation: dotty steps(1, end) 1s infinite;
-  content: "";
-}
-
-@keyframes dotty {
+@keyframes blink {
   0% {
-    content: "";
-  }
-  25% {
-    content: ".";
+    opacity: 1;
   }
   50% {
-    content: "..";
-  }
-  75% {
-    content: "...";
+    opacity: 0;
   }
   100% {
-    content: "";
+    opacity: 1;
   }
 }
 
