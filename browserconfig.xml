@@ -2,11 +2,7 @@
 <browserconfig>
     <msapplication>
         <tile>
-            <square70x70logo src="/favicon/apino-70x70.png"/>
-            <square144x144logo src="/favicon/apino-144x144.png"/>
-            <square150x150logo src="/favicon/apino-150x150.png"/>
-            <wide310x150logo src="/favicon/apino-310x150.png"/>
-            <square310x310logo src="/favicon/apino-310x310.png"/>
+            <square150x150logo src="/favicon/takafzar-150x150.png"/>
             <TileColor>#ffffff</TileColor>
         </tile>
     </msapplication>
