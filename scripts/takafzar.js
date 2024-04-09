@@ -13,34 +13,45 @@ const slider = () => {
     }
   }
 
-  const show = (i) => {
+  const show = (id) => {
+    hideAll()
     let title
-    title = document.getElementById(titles[i])
+    title = document.getElementById(id)
     title.classList.add("title-show")
 
-    context = document.getElementById(`context-${titles[i]}`)
+    context = document.getElementById(`context-${id}`)
     context.classList.add("context-show")
   }
 
+  const showItem = (i) => {
+    show(titles[i])
+  }
+
   const previous = () => {
-    hideAll()
     if (i == 0) {
       i = titles.length
     }
-    console.log(i)
-    show(--i)
+    showItem(--i)
   }
 
   const next = () => {
-    hideAll()
     if (i == titles.length - 1) {
       i = -1
     }
-    console.log(i)
-    show(++i)
+    showItem(++i)
   }
 
-  return { previous, next }
+  return { previous, next, show }
 }
 
 const slide = slider()
+
+const openMenu = () => {
+  const menu = document.getElementById("menu")
+  menu.classList.add("menu-show")
+}
+
+const hideMenu = () => {
+  const menu = document.getElementById("menu")
+  menu.classList.remove("menu-show")
+}
