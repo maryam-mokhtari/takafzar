@@ -1,8 +1,10 @@
 :root {
   --border: #4b4d35;
-  --main: #050501;
+  --article: #0c2125;
   --background: #000;
   --text: #f9f9de;
+
+  --logo: #0a4166;
 
   --error: #ff0000;
   --success: #008000;
@@ -10,6 +12,8 @@
   --gear-green: #a9e6ba;
   --gear-red: #e6a9ac;
   --gear-blue: #a9c7e6;
+
+  --image-percent: 40%;
 }
 
 @font-face {
@@ -19,27 +23,11 @@
   src: url("fonts/poppins.woff2") format("woff2");
 }
 
-@font-face {
-  font-family: Yekan;
-  font-style: normal;
-  font-weight: normal;
-  font-display: swap;
-  src: url("fonts/yekan.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: Yekan Persian Number;
-  font-style: normal;
-  font-weight: normal;
-  font-display: swap;
-  src: url("fonts/yekan-persian-number.woff") format("woff");
-}
-
 body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: Yekan;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: var(--background);
   color: var(--text);
   line-height: 2;
@@ -66,43 +54,149 @@ a:active {
 
 h1 {
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.75rem;
   margin: 0;
 }
 h2 {
   font-weight: bold;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   margin: 0;
 }
 h3 {
   font-weight: bold;
-  font-size: 1.5rem;
-  margin: 0;
-}
-h4 {
-  font-weight: bold;
   font-size: 1.25rem;
   margin: 0;
 }
+h4,
 h5 {
   font-weight: bold;
+  font-size: 1rem;
   margin: 0;
 }
 
 main {
   position: fixed;
-  top: 200px;
+  top: 180px;
   left: 16px;
-  z-index: 1;
-  display: flex;
   width: calc(100% - 32px);
   justify-content: space-between;
   align-items: center;
-  padding: 12px;
-  background-color: var(--main);
-  /* border: 1px solid var(--border); */
+  padding-bottom: 12px;
+  height: calc(100% - 200px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.head-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.firstware {
+  background-color: var(--logo);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: large;
+  font-style: italic;
+  color: white;
+  padding: 0 12px;
   border-radius: 12px;
-  height: calc(100% - 250px);
+  margin: 0 4px;
+  display: inline-block;
+}
+
+.titles-wrapper,
+.context-wrapper {
+  position: relative;
+}
+
+.article-title,
+article {
+  background-color: var(--article);
+  width: 100%;
+  margin-bottom: 12px;
+  border-radius: 4px;
+  max-height: 800px;
+  overflow: hidden;
+}
+
+article {
+  text-align: justify;
+  overflow-y: auto;
+}
+
+.article-title {
+  font-size: medium;
+  padding: 0 12px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titles {
+  position: absolute;
+  left: 0;
+  top: -15px;
+  white-space: nowrap;
+  transition: transform 1s;
+  transform: translateX(-50%) translateY(-100px);
+}
+
+.title-show {
+  transform: translateX(-50%) translateY(0);
+}
+
+.contexts {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 1s;
+  transform: translateY(-100px);
+  opacity: 0;
+  padding: 12px 20px;
+}
+
+.context-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+article {
+  height: 100%;
+}
+
+.arrow-wrapper {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  position: relative;
+}
+.arrow-wrapper:hover {
+  background-color: var(--border);
+  cursor: pointer;
+}
+
+.arrow {
+  border: 7px solid transparent;
+  width: 7px;
+  height: 7px;
+  transform: scaleX(1.2);
+  position: absolute;
+  top: 5px;
+}
+
+.next {
+  border-left-color: var(--text);
+  left: 11px;
+}
+
+.previous {
+  border-right-color: var(--text);
+  right: 11px;
 }
 
 .head {
@@ -110,7 +204,6 @@ main {
   left: 16px;
   top: 20px;
   direction: ltr;
-  font-family: "Courier New", Courier, monospace;
   font-weight: bold;
 }
 
@@ -118,8 +211,9 @@ main {
   position: fixed;
   top: 8px;
   left: 0px;
-  width: 50%;
+  width: 0;
   display: none;
+  margin: auto;
 }
 
 .logo {
@@ -128,6 +222,10 @@ main {
   right: 8px;
   width: 100px;
   height: 100px;
+}
+
+.small-logo {
+  width: 50px;
 }
 
 .one-green,
@@ -157,6 +255,16 @@ main {
   right: 90px;
 }
 
+.apino {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.apino-link {
+  padding: 0 8px;
+}
+
 .socials {
   position: fixed;
   bottom: 12px;
@@ -178,16 +286,17 @@ main {
   align-items: center;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 1000px) {
   .image {
     display: block;
+    width: var(--image-percent);
   }
   .head,
   main {
-    left: 50%;
+    left: var(--image-percent);
   }
   main {
-    width: calc(50% - 32px);
+    width: calc(100% - var(--image-percent) - 32px);
   }
 }
 
