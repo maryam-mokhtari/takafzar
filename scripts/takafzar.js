@@ -1,6 +1,13 @@
 const slider = () => {
   let i = 0
-  const titles = ["about", "products", "apino", "customers", "contact"]
+  const titles = [
+    "about",
+    "products",
+    "apino",
+    "customers",
+    "honors",
+    "contact",
+  ]
 
   const hideAll = () => {
     let title
