@@ -4,8 +4,8 @@
   --hover: #4b4d35;
   --border: #35454d;
   --text: #f9f9de;
-
   --logo: #0a4166;
+  --apino: #0044ff;
 
   --error: #ff0000;
   --success: #008000;
@@ -123,11 +123,27 @@ main {
   border-radius: 4px;
   margin: 4px 0;
   background-color: var(--border);
-  /* box-shadow: 0px 0px 2px 1px var(--border); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .menu-item:hover {
   background-color: var(--hover);
   cursor: pointer;
+}
+
+.apino {
+  height: 60px;
+  font-size: x-large;
+  font-family: Poppins;
+  color: var(--apino);
+  background-color: var(--text);
+  text-shadow: 0px 0px 20px white;
+  border: 1px solid white;
+}
+.apino:hover {
+  background-color: white;
+  border: 1px solid var(--apino);
 }
 
 .open-menu {
@@ -299,7 +315,7 @@ article {
   right: 90px;
 }
 
-.apino {
+.footer-link {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
