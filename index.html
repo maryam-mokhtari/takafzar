@@ -83,515 +83,553 @@
     />
     <script src="scripts/takafzar.js"></script>
   </head>
-  <body>
-    <a class="logo" href="https://takafzar.net">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        x="0px"
-        y="0px"
-        viewBox="0 0 645 526"
-      >
-        <defs />
-        <g>
-          <path
-            x="-100,136"
-            y="-100,136"
-            class="gear-small"
-            d="M200 236v-21l-29-4c-2-10-6-18-11-26l18-23 -15-15 -23 18c-8-5-17-9-26-11l-4-29H90l-4 29c-10 2-18 6-26 11l-23-18 -15 15 18 23c-5 8-9 17-11 26L0 215v21l29 4c2 10 6 18 11 26l-18 23 15 15 23-18c8 5 17 9 26 11l4 29h21l4-29c10-2 18-6 26-11l23 18 15-15 -18-23c5-8 9-17 11-26L200 236zM100 262c-20 0-37-17-37-37s17-37 37-37c20 0 37 17 37 37S121 262 100 262z"
-          />
-        </g>
-        <g>
-          <path
-            x="-173,694"
-            y="-173,694"
-            class="gear-large"
-            d="M635 184v-21l-29-4c-1-10-3-19-6-28l25-14 -8-19 -28 7c-5-8-10-16-16-24L592 58l-15-15 -23 17c-7-6-15-11-24-16l7-28 -19-8 -14 25c-9-3-18-5-28-6L472 0h-21l-4 29c-10 1-19 3-28 6L405 9l-19 8 7 28c-8 5-16 10-24 16l-23-17L331 58l17 23c-6 7-11 15-16 24l-28-7 -8 19 25 14c-3 9-5 18-6 28l-29 4v21l29 4c1 10 3 19 6 28l-25 14 8 19 28-7c5 8 10 16 16 24l-17 23 15 15 23-17c7 6 15 11 24 16l-7 28 19 8 14-25c9 3 18 5 28 6l4 29h21l4-29c10-1 19-3 28-6l14 25 19-8 -7-28c8-5 16-10 24-16l23 17 15-15 -17-23c6-7 11-15 16-24l28 7 8-19 -25-14c3-9 5-18 6-28L635 184zM461 284c-61 0-110-49-110-110S401 64 461 64s110 49 110 110S522 284 461 284z"
-          />
-        </g>
-        <g>
-          <path
-            x="-136,996"
-            y="-136,996"
-            class="gear-medium"
-            d="M392 390v-21l-28-4c-1-10-4-19-7-28l23-17 -11-18L342 313c-6-8-13-14-20-20l11-26 -18-11 -17 23c-9-4-18-6-28-7l-4-28h-21l-4 28c-10 1-19 4-28 7l-17-23 -18 11 11 26c-8 6-14 13-20 20l-26-11 -11 18 23 17c-4 9-6 18-7 28l-28 4v21l28 4c1 10 4 19 7 28l-23 17 11 18 26-11c6 8 13 14 20 20l-11 26 18 11 17-23c9 4 18 6 28 7l4 28h21l4-28c10-1 19-4 28-7l17 23 18-11 -11-26c8-6 14-13 20-20l26 11 11-18 -23-17c4-9 6-18 7-28L392 390zM255 453c-41 0-74-33-74-74 0-41 33-74 74-74 41 0 74 33 74 74C328 420 295 453 255 453z"
-          />
-        </g>
-      </svg>
-      <div class="one-green">1</div>
-      <div class="one-red">1</div>
-      <div class="one-blue">1</div>
-    </a>
-    <div class="layout">
-      <div class="open-menu" onclick="openMenu()">
-        <hr />
-        <hr />
-        <hr />
-      </div>
-      <nav id="menu" class="menu">
-        <div class="menu-item" id="menu-about" onclick="slide.show('about')">
-          About Us
+  <body onscroll="scroll()" onload="load()">
+    <div id="ie">
+      <div class="inner-ie">
+        <div class="ie-title">
+          لطفا مرورگر خود را ارتقا دهید و دوباره تلاش کنید
         </div>
-        <div
-          class="menu-item"
-          id="menu-customers"
-          onclick="slide.show('products')"
-        >
-          Products
-        </div>
-        <div
-          class="menu-item apino"
-          id="menu-customers"
-          onclick="slide.show('apino')"
-        >
-          apino
-        </div>
-        <div
-          class="menu-item"
-          id="menu-customers"
-          onclick="slide.show('customers')"
-        >
-          Customers
-        </div>
-        <div class="menu-item" id="menu-honors" onclick="slide.show('honors')">
-          Honors
-        </div>
-        <div
-          class="menu-item"
-          id="menu-customers"
-          onclick="slide.show('contact')"
-        >
-          Contact Us
-        </div>
-      </nav>
-      <a
-        class="image"
-        target="_blank"
-        href="https://apino.ir"
-        title="Takafzar Software Development Company"
-      >
-        <img alt="Firstware" src="images/takafzar.jpg"
-      /></a>
-      <div class="container" onclick="hideMenu()">
-        <div class="link">
+        <div class="browsers">
+          <a href="https://www.microsoft.com/en-us/edge/download?form=MA13FJ">
+            <img alt="edge" src="images/edge.png" />
+          </a>
           <a
-            href="https://takafzar.net"
-            title="Takafzar Software Development Company"
+            href="https://support.google.com/chrome/answer/95346?hl=en&co=GENIE.Platform%3DDesktop"
           >
-            <h1 class="title">Takafzar</h1></a
-          >
-          <h2 class="subtitle">Software Development</h2>
-          <h3 class="description">Company</h3>
+            <img alt="chrome" src="images/chrome.png" />
+          </a>
+          <a href="https://www.mozilla.org/en-US/firefox/new/">
+            <img alt="firefox" src="images/firefox.png" />
+          </a>
+          <a href="https://www.opera.com/download">
+            <img alt="opera" src="images/opera.png" />
+          </a>
         </div>
-        <main>
-          <div class="article-title">
-            <div class="arrow-wrapper" onclick="slide.previous()">
-              <div class="arrow previous"></div>
-            </div>
-            <h2 class="titles-wrapper">
-              <div id="about" class="titles title-show">About Us</div>
-              <div id="apino" class="titles">
-                <a
-                  href="https://apino.ir"
-                  target="_blank"
-                  title="Takafzar Software Development Company"
-                  >APINO</a
-                >
-              </div>
-              <div id="products" class="titles">Products</div>
-              <div id="customers" class="titles">Customers</div>
-              <div id="honors" class="titles">Honors</div>
-              <div id="contact" class="titles">Contact Us</div>
-            </h2>
-
-            <div class="arrow-wrapper" onclick="slide.next()">
-              <div class="arrow next"></div>
-            </div>
-          </div>
-          <article>
-            <div class="context-wrapper">
-              <div id="context-about" class="contexts context-show">
-                Takafzar Software Development Company is a pioneer in
-                manipulating intelligent and interactive software solutions with
-                a rich history spanning over two decades. Renowned for its
-                experience in software engineering, Takafzar has been at the
-                forefront of technological evolution, adapting and excelling in
-                a rapidly changing digital landscape. With a robust portfolio of
-                successfully manipulated software programs, the company has
-                consistently delivered cutting-edge solutions that drive
-                efficiency, productivity, and growth for its global clientele.
-                Commitment of Takafzar to excellence is reflected in its team of
-                expert and genius professional programmers, who bring a wealth
-                of knowledge and innovative thinking to every project. As a
-                trusted partner in software development, Takafzar continues to
-                set industry standards, ensuring its clients are well-equipped
-                for the challenge of tomorrow.
-                <br />
-                Takafzar is proudly a Persian phrase of
-                <b>Firstware</b> which stands for the <b><i>first</i></b> and
-                <b><i>unique</i></b> solutions in
-                <b><i>software</i></b> development. In fact, FirstWare stands as
-                a testament to innovation and uniqueness in the realm of
-                software development. With a name that signifies being the
-                <i>first</i> in providing unparalleled
-                <i>software</i> solutions, FirstWare embodies the essence of
-                pioneering and one-of-a-kind services. For over two decades, the
-                company has not only adapted to the evolving technological
-                demands but has also set the benchmark for excellence. The name
-                "FirstWare" is a promise of delivering <i>unique</i>,
-                <i>state-of-the-art</i> solutions that cater to the intricate
-                needs of its diverse clientele. It is a name that resonates with
-                the company's ethos of being the first choice for clients
-                seeking <b><i>innovative</i></b
-                >, <b><i>reliable</i></b
-                >, and custom-tailored software services. As FirstWare continues
-                to expand its horizons, the name remains a beacon of the
-                company's dedication to leading the way in software excellence.
-                FirstWare is not just a leader in software development; it's a
-                visionary, charting a future where artificial intelligence (AI)
-                is seamlessly integrated into its products. The name FirstWare
-                itself is a declaration of the company's commitment to being the
-                <b><i>first</i></b> in harnessing the transformative power of AI
-                to deliver <b><i>unique</i></b> and <b><i>intelligent</i></b>
-                <b><i>software</i></b> solutions. With a two-decade legacy of
-                innovation, FirstWare is poised to revolutionize the industry by
-                embedding AI into the very fabric of its offerings, ensuring
-                that its clients benefit from smarter, more efficient, and
-                cutting-edge technologies. This strategic roadmap underscores
-                FirstWare's dedication to staying ahead of the curve,
-                continually enhancing its products with the latest AI
-                advancements to maintain its status as the premier provider of
-                bespoke software services.
-                <br />
-                Now, in Takafzar, we proudly unveil our latest creation:
-                <a
-                  href="https://apino.ir"
-                  target="_blank"
-                  title="Apino Transportation Service"
-                >
-                  APINO</a
-                >.
-              </div>
-              <div id="context-products" class="contexts">
-                Takafzar has manipulated many software solutions for different
-                industries and companies since 2003. Each of these
-                accomplishments reflects FirstWare's dedication to innovation
-                and its ability to deliver sophisticated, tailored solutions
-                that meet the evolving needs of its clients.
-                <ul>
-                  <li>
-                    <b>Quantitative Indicators Detection System</b>: Utilizing
-                    <i>AI</i> and <i>Data Mining</i> to enhance operational
-                    efficiency
-                  </li>
-                  <li>
-                    <b>Geographic Information System (GIS)</b>: Mapping and
-                    analyzing data for facilitating better urban planning and
-                    management
-                  </li>
-                  <li>
-                    <b>CMS and E-Shop Portal</b>: Streamlining content
-                    management and e-commerce operations with a robust,
-                    user-friendly platform
-                  </li>
-                  <li>
-                    <b>Electronic Journal and Conference Management System</b>:
-                    Simplifying the publication and organization of academic
-                    works and events digitally
-                  </li>
-                  <li>
-                    <b>University Management System Package</b>: Offering
-                    comprehensive solutions for academic administration, from
-                    enrollment to alumni relations
-                  </li>
-                  <li>
-                    <b>Taxi Automation Payment System</b>: Modernizing taxi
-                    services with an automated fare collection and dispatch
-                    system
-                  </li>
-                  <li>
-                    <b>Data Mining for E-Shops</b>: Enhancing the online
-                    shopping experience with personalized recommendations and
-                    insights
-                  </li>
-                  <li>
-                    <b>Electronic Map</b>: Providing a digital navigational tool
-                    that showcases the city's layout and points of interest
-                  </li>
-                </ul>
-              </div>
-              <div id="context-apino" class="contexts">
-                <a
-                  href="https://apino.ir"
-                  title="Apino Transportation Service"
-                  target="_blank"
-                  >Apino</a
-                >
-                is latest innovation of Takafzar in the transportation sector, a
-                cutting-edge application designed to revolutionize urban travel.
-                This intelligent transportation app leverages the power of
-                artificial intelligence to optimize routes, ensure timely
-                departures and arrivals, and enhance the overall travel
-                experience. With
-                <a
-                  href="https://apino.ir"
-                  title="Apino Transportation Service"
-                  target="_blank"
-                  >Apino</a
-                >, FirstWare introduces a new level of convenience and
-                efficiency to public transportation, making it easier than ever
-                for commuters to navigate the city with confidence. The
-                intuitive interface and robust features, such as real-time
-                tracking and smart scheduling, embody FirstWare’s commitment to
-                delivering first-rate, unique solutions that make a tangible
-                difference in people’s daily lives.
-                <a
-                  href="https://apino.ir"
-                  title="Apino Transportation Service"
-                  target="_blank"
-                  >Apino</a
-                >
-                is not just an application; it’s a beacon of innovation in the
-                smart mobility domain, steering the future of urban
-                transportation with every minibus journey.
-                <br />
-                The unique point of APINO is the utmost and incredible impact on
-                urban traffic and air pollution. In fact,
-                <a
-                  href="https://apino.ir"
-                  title="Apino Transportation Service"
-                  target="_blank"
-                  >Apino</a
-                >
-                is not only a beacon of convenience in urban mobility but also a
-                significant contributor to the reduction of urban traffic
-                congestion and air pollution. By optimizing minibus routes and
-                schedules,
-                <a
-                  href="https://apino.ir"
-                  title="Apino Transportation Service"
-                  target="_blank"
-                  >Apino</a
-                >
-                facilitates more efficient use of existing transportation
-                infrastructure, which can lead to fewer vehicles on the road and
-                reduced traffic bottlenecks. This efficiency translates to lower
-                emissions per trip, contributing to cleaner air and a healthier
-                urban environment. Moreover,
-                <a
-                  href="https://apino.ir"
-                  title="Apino Transportation Service"
-                  target="_blank"
-                  >Apino</a
-                >
-                encourages the use of shared transportation options, further
-                diminishing the carbon footprint of city commutes. FirstWare
-                Solutions’ commitment to sustainability is evident in Apino’s
-                design, which aims to create a greener, more breathable
-                cityscape for future generations.
-                <br />
-                Considering minibuses and vans,
-                <a
-                  href="https://apino.ir"
-                  title="Apino Transportation Service"
-                  target="_blank"
-                  >Apino</a
-                >
-                takes advantage of the mid way of bus and automobile; faster
-                than the bus and cheaper than the automobile.
-                <a
-                  href="https://apino.ir"
-                  title="Apino Transportation Service"
-                  target="_blank"
-                  >Apino</a
-                >
-                redefines urban transit by striking the perfect balance between
-                the traditional bus and the personal automobile. It offers the
-                speed of a bus with the added convenience and agility to
-                navigate through traffic more efficiently, while also providing
-                a cost-effective alternative to the expense of personal car
-                ownership. This innovative approach positions minibuses as an
-                optimal transportation solution: faster than a bus yet more
-                economical than an automobile. Takafzar
-                <a
-                  href="https://apino.ir"
-                  title="Apino Transportation Service"
-                  target="_blank"
-                  >Apino</a
-                >
-                stands out as a smart choice for city dwellers seeking a swift,
-                affordable, and eco-friendly way to travel.
-              </div>
-              <div id="context-customers" class="contexts">
-                Takafzar Software Development Company has cultivated a robust
-                customer base in both the <b>B2B</b> (Business-to-Business) and
-                <b>B2C</b> (Business-to-Consumer) sectors. Our B2B engagements
-                have seen us partner with leading organizations to deliver
-                bespoke software solutions that drive business success. In the
-                B2C realm, we've touched the lives of countless consumers,
-                providing them with innovative applications that enhance their
-                daily experiences. This dual approach has not only diversified
-                our expertise but also solidified our reputation as a versatile
-                and customer-centric software development company. Some of our
-                B2B partners are:
-                <ul>
-                  <li>Tehran Municipality</li>
-                  <li>Isfahan Municipality</li>
-                  <li>Isfahan Steel Company</li>
-                  <li>Isfahan Science & Technology Town</li>
-                  <li>Isfahan University of Technology</li>
-                  <li>Academic Center for Education, Culture, and research</li>
-                  <li>Isfahan Taxi Organization</li>
-                  <li>Daneshpajoohan College of Engineering</li>
-                </ul>
-              </div>
-              <div id="context-honors" class="contexts">
-                Takafzar Software Development Company is proud to be recognized
-                for its contributions and achievements in the tech industry. Our
-                commitment to innovation and excellence has been honored with
-                accolades such as an honorable mention at the
-                <b>National Sheikh Bahai Technopreneurship Festival</b>.
-                <br />
-                Furthermore, we are dedicated to supporting the community
-                through initiatives like <b>Sponsoring the Startup Weekends</b>,
-                which aligns with our values of promoting diversity and
-                empowering emerging entrepreneurs. These recognitions and our
-                volunteer work reflect our ongoing dedication to making a
-                positive impact in the software industry and society. The
-                <b>training courses</b> and <b>internships</b> held in Takafzar
-                Software Development company are a turning point in supporting
-                web and application programmers. We are proud that many expert
-                and professional programmers are trained in Takafzar Software
-                Development company gaining help of powerful mentors. We are
-                available to consult and mentor you in every aspects of
-                <b>Software Development</b>
-              </div>
-              <div id="context-contact" class="contexts">
-                FirstWare Solutions invites customers to connect with us through
-                a variety of channels. Whether you prefer the immediacy of a
-                <b>phone call</b>, the convenience of an <b>email</b>, or the
-                interactive nature of <b>social media</b> platforms like
-                <b>Instagram</b>, <b>Telegram</b>, and <b>LinkedIn</b>, we are
-                here to assist you. Our team is dedicated to providing prompt
-                and attentive service, ensuring that your queries and needs are
-                addressed with the utmost care and professionalism. Reach out to
-                us, and let's start the conversation about how we can support
-                your software development journey.
-                <ul>
-                  <li>
-                    <b>Email</b>:
-                    <a href="mailto:info@takafzar.net">info@takafzar.net</a>
-                  </li>
-                  <li>
-                    <b>Contact on call</b>:
-                    <a href="tel:+982166371397">+982166371397</a>
-                  </li>
-                  <li>
-                    <b>Contact on skype</b>:
-                    <a href="callto:+989224012079">+989224012079</a>
-                  </li>
-                  <li>
-                    <b>Send SMS</b>:
-
-                    <a href="SMS:+989224012079">+989224012079</a>
-                  </li>
-                  <li>
-                    <b>Send Fax</b>:
-                    <a href="fax:+982166371397">+982166371397</a>
-                  </li>
-                  <li>
-                    <b>Instagram</b>:
-                    <a href="https://instagram.com/takafzar_net" target="_blank"
-                      >@takafzar_net</a
-                    >
-                  </li>
-                  <li>
-                    <b>LinkedIn</b>:
-                    <a
-                      href="https://linkedin.com/company/takafzar"
-                      target="_blank"
-                      >https://linkedin.com/company/takafzar</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </article>
-          <footer class="footer-link">
-            <div class="footer-link">
-              <a href="https://takafzar.net">
-                <img
-                  src="images/takafzar.svg"
-                  alt="Takafzar Software Development Company"
-                  class="small-logo"
-              /></a>
-              <a href="https://takafzar.net" class="firstware">Firstware</a>
-            </div>
-            <div class="apino-link">Visit our new product web page:</div>
-            <div class="apino-link">
-              <a target="_blank" href="https://apino.ir">https://apino.ir</a>
-            </div>
-          </footer>
-        </main>
       </div>
     </div>
-    <footer class="socials">
-      <a
-        class="social-media"
-        target="_blank"
-        href="https://instagram.com/takafzar_net"
-      >
+    <div id="wrapper">
+      <a class="logo" href="https://takafzar.net">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          width="24px"
-          height="24px"
+          x="0px"
+          y="0px"
+          viewBox="0 0 645 526"
         >
-          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-          <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
-        </svg>
-      </a>
-
-      <a
-        class="social-media"
-        target="_blank"
-        href="https://linkedin.com/company/takafzar"
-      >
-        <svg
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          width="20px"
-          height="20px"
-        >
-          <g
-            id="Page-1"
-            stroke="none"
-            stroke-width="1"
-            fill="none"
-            fill-rule="evenodd"
-          >
-            <g
-              id="Dribbble-Light-Preview"
-              transform="translate(-180.000000, -7479.000000)"
-              fill="currentColor"
-            >
-              <g id="icons" transform="translate(56.000000, 160.000000)">
-                <path
-                  d="M144,7339 L140,7339 L140,7332.001 C140,7330.081 139.153,7329.01 137.634,7329.01 C135.981,7329.01 135,7330.126 135,7332.001 L135,7339 L131,7339 L131,7326 L135,7326 L135,7327.462 C135,7327.462 136.255,7325.26 139.083,7325.26 C141.912,7325.26 144,7326.986 144,7330.558 L144,7339 L144,7339 Z M126.442,7323.921 C125.093,7323.921 124,7322.819 124,7321.46 C124,7320.102 125.093,7319 126.442,7319 C127.79,7319 128.883,7320.102 128.883,7321.46 C128.884,7322.819 127.79,7323.921 126.442,7323.921 L126.442,7323.921 Z M124,7339 L129,7339 L129,7326 L124,7326 L124,7339 Z"
-                  id="linkedin-[#161]"
-                ></path>
-              </g>
-            </g>
+          <defs />
+          <g>
+            <path
+              x="-100,136"
+              y="-100,136"
+              class="gear-small"
+              d="M200 236v-21l-29-4c-2-10-6-18-11-26l18-23 -15-15 -23 18c-8-5-17-9-26-11l-4-29H90l-4 29c-10 2-18 6-26 11l-23-18 -15 15 18 23c-5 8-9 17-11 26L0 215v21l29 4c2 10 6 18 11 26l-18 23 15 15 23-18c8 5 17 9 26 11l4 29h21l4-29c10-2 18-6 26-11l23 18 15-15 -18-23c5-8 9-17 11-26L200 236zM100 262c-20 0-37-17-37-37s17-37 37-37c20 0 37 17 37 37S121 262 100 262z"
+            />
+          </g>
+          <g>
+            <path
+              x="-173,694"
+              y="-173,694"
+              class="gear-large"
+              d="M635 184v-21l-29-4c-1-10-3-19-6-28l25-14 -8-19 -28 7c-5-8-10-16-16-24L592 58l-15-15 -23 17c-7-6-15-11-24-16l7-28 -19-8 -14 25c-9-3-18-5-28-6L472 0h-21l-4 29c-10 1-19 3-28 6L405 9l-19 8 7 28c-8 5-16 10-24 16l-23-17L331 58l17 23c-6 7-11 15-16 24l-28-7 -8 19 25 14c-3 9-5 18-6 28l-29 4v21l29 4c1 10 3 19 6 28l-25 14 8 19 28-7c5 8 10 16 16 24l-17 23 15 15 23-17c7 6 15 11 24 16l-7 28 19 8 14-25c9 3 18 5 28 6l4 29h21l4-29c10-1 19-3 28-6l14 25 19-8 -7-28c8-5 16-10 24-16l23 17 15-15 -17-23c6-7 11-15 16-24l28 7 8-19 -25-14c3-9 5-18 6-28L635 184zM461 284c-61 0-110-49-110-110S401 64 461 64s110 49 110 110S522 284 461 284z"
+            />
+          </g>
+          <g>
+            <path
+              x="-136,996"
+              y="-136,996"
+              class="gear-medium"
+              d="M392 390v-21l-28-4c-1-10-4-19-7-28l23-17 -11-18L342 313c-6-8-13-14-20-20l11-26 -18-11 -17 23c-9-4-18-6-28-7l-4-28h-21l-4 28c-10 1-19 4-28 7l-17-23 -18 11 11 26c-8 6-14 13-20 20l-26-11 -11 18 23 17c-4 9-6 18-7 28l-28 4v21l28 4c1 10 4 19 7 28l-23 17 11 18 26-11c6 8 13 14 20 20l-11 26 18 11 17-23c9 4 18 6 28 7l4 28h21l4-28c10-1 19-4 28-7l17 23 18-11 -11-26c8-6 14-13 20-20l26 11 11-18 -23-17c4-9 6-18 7-28L392 390zM255 453c-41 0-74-33-74-74 0-41 33-74 74-74 41 0 74 33 74 74C328 420 295 453 255 453z"
+            />
           </g>
         </svg>
+        <div class="one-green">1</div>
+        <div class="one-red">1</div>
+        <div class="one-blue">1</div>
       </a>
-    </footer>
+      <div class="layout">
+        <div class="open-menu" onclick="openMenu()">
+          <hr />
+          <hr />
+          <hr />
+        </div>
+        <nav id="menu" class="menu">
+          <div class="menu-item" id="menu-about" onclick="slide.show('about')">
+            About Us
+          </div>
+          <div
+            class="menu-item"
+            id="menu-customers"
+            onclick="slide.show('products')"
+          >
+            Products
+          </div>
+          <div
+            class="menu-item apino"
+            id="menu-customers"
+            onclick="slide.show('apino')"
+          >
+            apino
+          </div>
+          <div
+            class="menu-item"
+            id="menu-customers"
+            onclick="slide.show('customers')"
+          >
+            Customers
+          </div>
+          <div
+            class="menu-item"
+            id="menu-honors"
+            onclick="slide.show('honors')"
+          >
+            Honors
+          </div>
+          <div
+            class="menu-item"
+            id="menu-customers"
+            onclick="slide.show('contact')"
+          >
+            Contact Us
+          </div>
+        </nav>
+        <a
+          class="image"
+          target="_blank"
+          href="https://apino.ir"
+          title="Takafzar Software Development Company"
+        >
+          <img alt="Firstware" src="images/takafzar.jpg"
+        /></a>
+        <div class="container" onclick="hideMenu()">
+          <div class="link">
+            <a
+              href="https://takafzar.net"
+              title="Takafzar Software Development Company"
+            >
+              <h1 class="title">Takafzar</h1></a
+            >
+            <h2 class="subtitle">Software Development</h2>
+            <h3 class="description">Company</h3>
+          </div>
+          <main>
+            <div class="article-title">
+              <div class="arrow-wrapper" onclick="slide.previous()">
+                <div class="arrow previous"></div>
+              </div>
+              <h2 class="titles-wrapper">
+                <div id="about" class="titles title-show">About Us</div>
+                <div id="apino" class="titles">
+                  <a
+                    href="https://apino.ir"
+                    target="_blank"
+                    title="Takafzar Software Development Company"
+                    >APINO</a
+                  >
+                </div>
+                <div id="products" class="titles">Products</div>
+                <div id="customers" class="titles">Customers</div>
+                <div id="honors" class="titles">Honors</div>
+                <div id="contact" class="titles">Contact Us</div>
+              </h2>
 
+              <div class="arrow-wrapper" onclick="slide.next()">
+                <div class="arrow next"></div>
+              </div>
+            </div>
+            <article>
+              <div class="context-wrapper">
+                <div id="context-about" class="contexts context-show">
+                  Takafzar Software Development Company is a pioneer in
+                  manipulating intelligent and interactive software solutions
+                  with a rich history spanning over two decades. Renowned for
+                  its experience in software engineering, Takafzar has been at
+                  the forefront of technological evolution, adapting and
+                  excelling in a rapidly changing digital landscape. With a
+                  robust portfolio of successfully manipulated software
+                  programs, the company has consistently delivered cutting-edge
+                  solutions that drive efficiency, productivity, and growth for
+                  its global clientele. Commitment of Takafzar to excellence is
+                  reflected in its team of expert and genius professional
+                  programmers, who bring a wealth of knowledge and innovative
+                  thinking to every project. As a trusted partner in software
+                  development, Takafzar continues to set industry standards,
+                  ensuring its clients are well-equipped for the challenge of
+                  tomorrow.
+                  <br />
+                  Takafzar is proudly a Persian phrase of
+                  <b>Firstware</b> which stands for the <b><i>first</i></b> and
+                  <b><i>unique</i></b> solutions in
+                  <b><i>software</i></b> development. In fact, FirstWare stands
+                  as a testament to innovation and uniqueness in the realm of
+                  software development. With a name that signifies being the
+                  <i>first</i> in providing unparalleled
+                  <i>software</i> solutions, FirstWare embodies the essence of
+                  pioneering and one-of-a-kind services. For over two decades,
+                  the company has not only adapted to the evolving technological
+                  demands but has also set the benchmark for excellence. The
+                  name "FirstWare" is a promise of delivering <i>unique</i>,
+                  <i>state-of-the-art</i> solutions that cater to the intricate
+                  needs of its diverse clientele. It is a name that resonates
+                  with the company's ethos of being the first choice for clients
+                  seeking <b><i>innovative</i></b
+                  >, <b><i>reliable</i></b
+                  >, and custom-tailored software services. As FirstWare
+                  continues to expand its horizons, the name remains a beacon of
+                  the company's dedication to leading the way in software
+                  excellence. FirstWare is not just a leader in software
+                  development; it's a visionary, charting a future where
+                  artificial intelligence (AI) is seamlessly integrated into its
+                  products. The name FirstWare itself is a declaration of the
+                  company's commitment to being the <b><i>first</i></b> in
+                  harnessing the transformative power of AI to deliver
+                  <b><i>unique</i></b> and <b><i>intelligent</i></b>
+                  <b><i>software</i></b> solutions. With a two-decade legacy of
+                  innovation, FirstWare is poised to revolutionize the industry
+                  by embedding AI into the very fabric of its offerings,
+                  ensuring that its clients benefit from smarter, more
+                  efficient, and cutting-edge technologies. This strategic
+                  roadmap underscores FirstWare's dedication to staying ahead of
+                  the curve, continually enhancing its products with the latest
+                  AI advancements to maintain its status as the premier provider
+                  of bespoke software services.
+                  <br />
+                  Now, in Takafzar, we proudly unveil our latest creation:
+                  <a
+                    href="https://apino.ir"
+                    target="_blank"
+                    title="Apino Transportation Service"
+                  >
+                    APINO</a
+                  >.
+                </div>
+                <div id="context-products" class="contexts">
+                  Takafzar has manipulated many software solutions for different
+                  industries and companies since 2003. Each of these
+                  accomplishments reflects FirstWare's dedication to innovation
+                  and its ability to deliver sophisticated, tailored solutions
+                  that meet the evolving needs of its clients.
+                  <ul>
+                    <li>
+                      <b>Quantitative Indicators Detection System</b>: Utilizing
+                      <i>AI</i> and <i>Data Mining</i> to enhance operational
+                      efficiency
+                    </li>
+                    <li>
+                      <b>Geographic Information System (GIS)</b>: Mapping and
+                      analyzing data for facilitating better urban planning and
+                      management
+                    </li>
+                    <li>
+                      <b>CMS and E-Shop Portal</b>: Streamlining content
+                      management and e-commerce operations with a robust,
+                      user-friendly platform
+                    </li>
+                    <li>
+                      <b>Electronic Journal and Conference Management System</b
+                      >: Simplifying the publication and organization of
+                      academic works and events digitally
+                    </li>
+                    <li>
+                      <b>University Management System Package</b>: Offering
+                      comprehensive solutions for academic administration, from
+                      enrollment to alumni relations
+                    </li>
+                    <li>
+                      <b>Taxi Automation Payment System</b>: Modernizing taxi
+                      services with an automated fare collection and dispatch
+                      system
+                    </li>
+                    <li>
+                      <b>Data Mining for E-Shops</b>: Enhancing the online
+                      shopping experience with personalized recommendations and
+                      insights
+                    </li>
+                    <li>
+                      <b>Electronic Map</b>: Providing a digital navigational
+                      tool that showcases the city's layout and points of
+                      interest
+                    </li>
+                  </ul>
+                </div>
+                <div id="context-apino" class="contexts">
+                  <a
+                    href="https://apino.ir"
+                    title="Apino Transportation Service"
+                    target="_blank"
+                    >Apino</a
+                  >
+                  is latest innovation of Takafzar in the transportation sector,
+                  a cutting-edge application designed to revolutionize urban
+                  travel. This intelligent transportation app leverages the
+                  power of artificial intelligence to optimize routes, ensure
+                  timely departures and arrivals, and enhance the overall travel
+                  experience. With
+                  <a
+                    href="https://apino.ir"
+                    title="Apino Transportation Service"
+                    target="_blank"
+                    >Apino</a
+                  >, FirstWare introduces a new level of convenience and
+                  efficiency to public transportation, making it easier than
+                  ever for commuters to navigate the city with confidence. The
+                  intuitive interface and robust features, such as real-time
+                  tracking and smart scheduling, embody FirstWare’s commitment
+                  to delivering first-rate, unique solutions that make a
+                  tangible difference in people’s daily lives.
+                  <a
+                    href="https://apino.ir"
+                    title="Apino Transportation Service"
+                    target="_blank"
+                    >Apino</a
+                  >
+                  is not just an application; it’s a beacon of innovation in the
+                  smart mobility domain, steering the future of urban
+                  transportation with every minibus journey.
+                  <br />
+                  The unique point of APINO is the utmost and incredible impact
+                  on urban traffic and air pollution. In fact,
+                  <a
+                    href="https://apino.ir"
+                    title="Apino Transportation Service"
+                    target="_blank"
+                    >Apino</a
+                  >
+                  is not only a beacon of convenience in urban mobility but also
+                  a significant contributor to the reduction of urban traffic
+                  congestion and air pollution. By optimizing minibus routes and
+                  schedules,
+                  <a
+                    href="https://apino.ir"
+                    title="Apino Transportation Service"
+                    target="_blank"
+                    >Apino</a
+                  >
+                  facilitates more efficient use of existing transportation
+                  infrastructure, which can lead to fewer vehicles on the road
+                  and reduced traffic bottlenecks. This efficiency translates to
+                  lower emissions per trip, contributing to cleaner air and a
+                  healthier urban environment. Moreover,
+                  <a
+                    href="https://apino.ir"
+                    title="Apino Transportation Service"
+                    target="_blank"
+                    >Apino</a
+                  >
+                  encourages the use of shared transportation options, further
+                  diminishing the carbon footprint of city commutes. FirstWare
+                  Solutions’ commitment to sustainability is evident in Apino’s
+                  design, which aims to create a greener, more breathable
+                  cityscape for future generations.
+                  <br />
+                  Considering minibuses and vans,
+                  <a
+                    href="https://apino.ir"
+                    title="Apino Transportation Service"
+                    target="_blank"
+                    >Apino</a
+                  >
+                  takes advantage of the mid way of bus and automobile; faster
+                  than the bus and cheaper than the automobile.
+                  <a
+                    href="https://apino.ir"
+                    title="Apino Transportation Service"
+                    target="_blank"
+                    >Apino</a
+                  >
+                  redefines urban transit by striking the perfect balance
+                  between the traditional bus and the personal automobile. It
+                  offers the speed of a bus with the added convenience and
+                  agility to navigate through traffic more efficiently, while
+                  also providing a cost-effective alternative to the expense of
+                  personal car ownership. This innovative approach positions
+                  minibuses as an optimal transportation solution: faster than a
+                  bus yet more economical than an automobile. Takafzar
+                  <a
+                    href="https://apino.ir"
+                    title="Apino Transportation Service"
+                    target="_blank"
+                    >Apino</a
+                  >
+                  stands out as a smart choice for city dwellers seeking a
+                  swift, affordable, and eco-friendly way to travel.
+                </div>
+                <div id="context-customers" class="contexts">
+                  Takafzar Software Development Company has cultivated a robust
+                  customer base in both the <b>B2B</b> (Business-to-Business)
+                  and <b>B2C</b> (Business-to-Consumer) sectors. Our B2B
+                  engagements have seen us partner with leading organizations to
+                  deliver bespoke software solutions that drive business
+                  success. In the B2C realm, we've touched the lives of
+                  countless consumers, providing them with innovative
+                  applications that enhance their daily experiences. This dual
+                  approach has not only diversified our expertise but also
+                  solidified our reputation as a versatile and customer-centric
+                  software development company. Some of our B2B partners are:
+                  <ul>
+                    <li>Tehran Municipality</li>
+                    <li>Isfahan Municipality</li>
+                    <li>Isfahan Steel Company</li>
+                    <li>Isfahan Science & Technology Town</li>
+                    <li>Isfahan University of Technology</li>
+                    <li>
+                      Academic Center for Education, Culture, and research
+                    </li>
+                    <li>Isfahan Taxi Organization</li>
+                    <li>Daneshpajoohan College of Engineering</li>
+                  </ul>
+                </div>
+                <div id="context-honors" class="contexts">
+                  Takafzar Software Development Company is proud to be
+                  recognized for its contributions and achievements in the tech
+                  industry. Our commitment to innovation and excellence has been
+                  honored with accolades such as an honorable mention at the
+                  <b>National Sheikh Bahai Technopreneurship Festival</b>.
+                  <br />
+                  Furthermore, we are dedicated to supporting the community
+                  through initiatives like
+                  <b>Sponsoring the Startup Weekends</b>, which aligns with our
+                  values of promoting diversity and empowering emerging
+                  entrepreneurs. These recognitions and our volunteer work
+                  reflect our ongoing dedication to making a positive impact in
+                  the software industry and society. The
+                  <b>training courses</b> and <b>internships</b> held in
+                  Takafzar Software Development company are a turning point in
+                  supporting web and application programmers. We are proud that
+                  many expert and professional programmers are trained in
+                  Takafzar Software Development company gaining help of powerful
+                  mentors. We are available to consult and mentor you in every
+                  aspects of
+                  <b>Software Development</b>
+                </div>
+                <div id="context-contact" class="contexts">
+                  FirstWare Solutions invites customers to connect with us
+                  through a variety of channels. Whether you prefer the
+                  immediacy of a
+                  <b>phone call</b>, the convenience of an <b>email</b>, or the
+                  interactive nature of <b>social media</b> platforms like
+                  <b>Instagram</b>, <b>Telegram</b>, and <b>LinkedIn</b>, we are
+                  here to assist you. Our team is dedicated to providing prompt
+                  and attentive service, ensuring that your queries and needs
+                  are addressed with the utmost care and professionalism. Reach
+                  out to us, and let's start the conversation about how we can
+                  support your software development journey.
+                  <ul>
+                    <li>
+                      <b>Email</b>:
+                      <a href="mailto:info@takafzar.net">info@takafzar.net</a>
+                    </li>
+                    <li>
+                      <b>Contact on call</b>:
+                      <a href="tel:+982166371397">+982166371397</a>
+                    </li>
+                    <li>
+                      <b>Contact on skype</b>:
+                      <a href="callto:+989224012079">+989224012079</a>
+                    </li>
+                    <li>
+                      <b>Send SMS</b>:
+
+                      <a href="SMS:+989224012079">+989224012079</a>
+                    </li>
+                    <li>
+                      <b>Send Fax</b>:
+                      <a href="fax:+982166371397">+982166371397</a>
+                    </li>
+                    <li>
+                      <b>Instagram</b>:
+                      <a
+                        href="https://instagram.com/takafzar_net"
+                        target="_blank"
+                        >@takafzar_net</a
+                      >
+                    </li>
+                    <li>
+                      <b>LinkedIn</b>:
+                      <a
+                        href="https://linkedin.com/company/takafzar"
+                        target="_blank"
+                        >https://linkedin.com/company/takafzar</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+            <footer class="footer-link">
+              <div class="footer-link">
+                <a href="https://takafzar.net">
+                  <img
+                    src="images/takafzar.svg"
+                    alt="Takafzar Software Development Company"
+                    class="small-logo"
+                /></a>
+                <a href="https://takafzar.net" class="firstware">Firstware</a>
+              </div>
+              <div class="apino-link">Visit our new product web page:</div>
+              <div class="apino-link">
+                <a target="_blank" href="https://apino.ir">https://apino.ir</a>
+              </div>
+            </footer>
+          </main>
+        </div>
+      </div>
+      <footer class="socials">
+        <a
+          class="social-media"
+          target="_blank"
+          href="https://instagram.com/takafzar_net"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            width="24px"
+            height="24px"
+          >
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
+          </svg>
+        </a>
+
+        <a
+          class="social-media"
+          target="_blank"
+          href="https://linkedin.com/company/takafzar"
+        >
+          <svg
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20px"
+            height="20px"
+          >
+            <g
+              id="Page-1"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <g
+                id="Dribbble-Light-Preview"
+                transform="translate(-180.000000, -7479.000000)"
+                fill="currentColor"
+              >
+                <g id="icons" transform="translate(56.000000, 160.000000)">
+                  <path
+                    d="M144,7339 L140,7339 L140,7332.001 C140,7330.081 139.153,7329.01 137.634,7329.01 C135.981,7329.01 135,7330.126 135,7332.001 L135,7339 L131,7339 L131,7326 L135,7326 L135,7327.462 C135,7327.462 136.255,7325.26 139.083,7325.26 C141.912,7325.26 144,7326.986 144,7330.558 L144,7339 L144,7339 Z M126.442,7323.921 C125.093,7323.921 124,7322.819 124,7321.46 C124,7320.102 125.093,7319 126.442,7319 C127.79,7319 128.883,7320.102 128.883,7321.46 C128.884,7322.819 127.79,7323.921 126.442,7323.921 L126.442,7323.921 Z M124,7339 L129,7339 L129,7326 L124,7326 L124,7339 Z"
+                    id="linkedin-[#161]"
+                  ></path>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </a>
+      </footer>
+    </div>
     <script type="application/ld+json" defer>
       [
         {

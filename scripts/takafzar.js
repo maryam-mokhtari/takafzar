@@ -62,3 +62,13 @@ const hideMenu = () => {
   const menu = document.getElementById("menu")
   menu.classList.remove("menu-show")
 }
+
+const load = () => {
+  if (document.documentMode) {
+    document.getElementById("ie").style.display = "block"
+    document.getElementById("wrapper").style.display = "none"
+  } else {
+    document.getElementById("wrapper").style.display = "block"
+    document.getElementById("ie").style.display = "none"
+  }
+}
